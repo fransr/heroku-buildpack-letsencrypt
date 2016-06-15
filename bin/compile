@@ -15,7 +15,10 @@ cd $CACHE_DIR
 tar xf letsencrypt.tar.gz
 mv letsencrypt.sh-master le.sh
 
+echo "WELLKNOWN=." > $CACHE_DIR/le.sh/config
+
 mv $CACHE_DIR/le.sh $BUILD_DIR
+
 
 echo "-----> exporting PATH for LE"
 PROFILE_PATH="$BUILD_DIR/.profile.d/letsencrypt.sh"
