@@ -10,9 +10,9 @@ CACHE_DIR=$2
 mkdir -p $CACHE_DIR
 mkdir -p $BUILD_DIR
 
-curl -s -L -o $CACHE_DIR/heroku-client.tgz https://github.com/fransr/letsencrypt.sh/archive/master.tar.gz
+curl -s -L -o $CACHE_DIR/letsencrypt.tar.gz https://github.com/fransr/letsencrypt.sh/archive/master.tar.gz
 cd $CACHE_DIR
-tar xf master.tar.gz
+tar xf letsencrypt.tar.gz
 
 #mv $CACHE_DIR/heroku-client $BUILD_DIR
 
