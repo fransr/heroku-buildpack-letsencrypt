@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo "-----> Installing Let's Encrypt"
+
+set -e
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+mkdir -p $CACHE_DIR
+mkdir -p $BUILD_DIR
+
+curl -s -L -o $CACHE_DIR/heroku-client.tgz https://github.com/fransr/letsencrypt.sh/archive/master.tar.gz
+cd $CACHE_DIR
+tar xf master.tar.gz
+
+#mv $CACHE_DIR/heroku-client $BUILD_DIR
+
+#echo "-----> exporting PATH for Heroku Toolbelt"
+#PROFILE_PATH="$BUILD_DIR/.profile.d/heroku.sh"
+#mkdir -p $(dirname $PROFILE_PATH)
+#echo 'export PATH="$HOME/heroku-client/bin:$PATH"' >> $PROFILE_PATH
+
+echo "-----> Let's Encrypt Installed"
+
