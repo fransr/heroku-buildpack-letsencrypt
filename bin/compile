@@ -14,7 +14,7 @@ curl -s -L -o $CACHE_DIR/letsencrypt.tar.gz https://github.com/fransr/letsencryp
 cd $CACHE_DIR
 tar xf letsencrypt.tar.gz
 
-mv $CACHE_DIR/letsencrypt.sh-master $BUILD_DIR
+mv $CACHE_DIR/letsencrypt.sh-master/* $BUILD_DIR/le.sh
 
 echo "-----> exporting PATH for LE"
 PROFILE_PATH="$BUILD_DIR/.profile.d/letsencrypt.sh"
