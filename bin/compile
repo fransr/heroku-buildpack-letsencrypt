@@ -14,12 +14,12 @@ curl -s -L -o $CACHE_DIR/letsencrypt.tar.gz https://github.com/fransr/letsencryp
 cd $CACHE_DIR
 tar xf letsencrypt.tar.gz
 
-#mv $CACHE_DIR/heroku-client $BUILD_DIR
+mv $CACHE_DIR/letsencrypt.sh-master $BUILD_DIR
 
-#echo "-----> exporting PATH for Heroku Toolbelt"
-#PROFILE_PATH="$BUILD_DIR/.profile.d/heroku.sh"
-#mkdir -p $(dirname $PROFILE_PATH)
-#echo 'export PATH="$HOME/heroku-client/bin:$PATH"' >> $PROFILE_PATH
+echo "-----> exporting PATH for LE"
+PROFILE_PATH="$BUILD_DIR/.profile.d/letsencrypt.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$HOME/letsencrypt.sh:$PATH"' >> $PROFILE_PATH
 
 echo "-----> Let's Encrypt Installed"
 
