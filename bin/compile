@@ -16,6 +16,7 @@ tar xf letsencrypt.tar.gz
 mv letsencrypt.sh-master le.sh
 
 echo "WELLKNOWN=." > $CACHE_DIR/le.sh/config
+echo "PRIVATE_KEY_RENEW=no" >> $CACHE_DIR/le.sh/config
 
 mv $CACHE_DIR/le.sh $BUILD_DIR
 
